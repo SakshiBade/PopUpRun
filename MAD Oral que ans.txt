@@ -1,0 +1,1070 @@
+
+🔹 EXPERIMENT 1: Android & Setup
+
+✅ Internal Viva
+
+1. What is Android?
+
+Answer:
+Android is a mobile operating system based on Linux. It is used to develop apps for smartphones.
+
+
+---
+
+2. Who developed Android?
+
+Answer:
+Android was developed by Android Inc. and later purchased by Google. 
+
+
+---
+
+3. What is Android Studio?
+
+Answer:
+Android Studio is an official IDE used to develop Android applications.
+
+
+---
+
+4. What is SDK?
+
+Answer:
+SDK (Software Development Kit) contains tools to develop Android apps.
+
+
+---
+
+5. What is Emulator?
+
+Answer:
+Emulator is a virtual device used to run Android apps on computer.
+
+
+---
+
+✅ External Viva
+
+6. What are requirements for Android development?
+
+Answer:
+
+Java JDK
+
+Android Studio
+
+Android SDK
+
+JRE 
+
+
+
+---
+
+7. What is project structure?
+
+Answer: Main folders:
+
+src → Java code
+
+res → layouts, images
+
+manifest → app info
+
+
+
+---
+
+
+---
+
+🔹 EXPERIMENT 2: Layouts
+
+✅ Internal Viva
+
+1. What is Layout?
+
+Answer:
+Layout defines the structure of UI in Android app. 
+
+
+---
+
+2. What is LinearLayout?
+
+Answer:
+It arranges elements in vertical or horizontal direction.
+
+
+---
+
+3. Example of LinearLayout
+
+<LinearLayout
+    android:orientation="vertical">
+</LinearLayout>
+
+
+---
+
+4. What is RelativeLayout?
+
+Answer:
+It arranges elements relative to each other.
+
+
+---
+
+5. What is TableLayout?
+
+Answer:
+It arranges UI in rows and columns.
+
+
+---
+
+✅ External Viva
+
+6. Difference between Linear & Relative Layout?
+
+Answer:
+
+Linear → one direction
+
+Relative → position relative
+
+
+
+---
+
+7. What is GridView?
+
+Answer:
+Displays items in rows and columns like gallery. 
+
+
+---
+
+8. What is ListView?
+
+Answer:
+Displays scrollable list of items.
+
+
+---
+
+9. What is FrameLayout?
+
+Answer:
+Used to display single view.
+
+
+---
+
+
+---
+
+🔹 EXPERIMENT 3: Intents
+
+✅ Internal Viva
+
+1. What is Intent?
+
+Answer:
+Intent is used to connect one activity to another. 
+
+
+---
+
+2. Types of Intent?
+
+Answer:
+
+1. Explicit
+
+
+2. Implicit
+
+
+
+
+---
+
+3. Example of Explicit Intent
+
+Intent i = new Intent(MainActivity.this, SecondActivity.class);
+startActivity(i);
+
+
+---
+
+4. Example of Implicit Intent
+
+Intent i = new Intent(Intent.ACTION_VIEW);
+startActivity(i);
+
+
+---
+
+✅ External Viva
+
+5. How to send data between activities?
+
+Intent i = new Intent(this, SecondActivity.class);
+i.putExtra("name", "Sakshi");
+startActivity(i);
+
+
+---
+
+6. How to receive data?
+
+Intent i = getIntent();
+String name = i.getStringExtra("name");
+
+
+---
+
+7. What is Activity?
+
+Answer:
+Activity is a single screen in Android app.
+
+
+---
+
+8. How to close activity?
+
+finish();
+
+
+---
+
+
+---
+
+🔹 EXPERIMENT 4: UI Controls
+
+✅ Internal Viva
+
+1. What is TextView?
+
+Answer:
+Used to display text.
+
+
+---
+
+2. What is EditText?
+
+Answer:
+Used to take input from user.
+
+
+---
+
+3. What is Button?
+
+Answer:
+Used to perform action when clicked.
+
+
+---
+
+4. Example Button
+
+<Button
+    android:text="Click Me"/>
+
+
+---
+
+5. What is CheckBox?
+
+Answer:
+Allows multiple selection.
+
+
+---
+
+6. What is RadioButton?
+
+Answer:
+Allows single selection.
+
+
+---
+
+7. What is ToggleButton?
+
+Answer:
+Used for ON/OFF state.
+
+
+---
+
+✅ External Viva (Important)
+
+8. Button Click Code
+
+Button btn = findViewById(R.id.button);
+btn.setOnClickListener(new View.OnClickListener() {
+    public void onClick(View v) {
+        // action
+    }
+});
+
+
+---
+
+9. XML Click Method
+
+<Button
+    android:onClick="myClick"/>
+
+public void myClick(View v){
+    // action
+}
+
+
+---
+
+10. EditText Example
+
+<EditText
+    android:hint="Enter name"/>
+
+
+---
+
+11. CheckBox Example
+
+<CheckBox
+    android:text="Accept Terms"/>
+
+
+---
+
+12. RadioButton Example
+
+<RadioGroup>
+    <RadioButton android:text="Male"/>
+    <RadioButton android:text="Female"/>
+</RadioGroup>
+
+
+---
+
+13. Toggle Button Code
+
+ToggleButton toggle = findViewById(R.id.toggle);
+toggle.setOnCheckedChangeListener((buttonView, isChecked) -> {
+    if(isChecked){
+        // ON
+    } else {
+        // OFF
+    }
+});
+
+
+--
+ EXPERIMENT 6
+🔹 GENERAL VIVA (Basic Questions)
+
+1. What is Android?
+
+👉 Android is an operating system for mobile phones used to develop apps.
+
+
+---
+
+2. What is Android Studio?
+
+👉 It is an IDE (tool) used to develop Android apps.
+
+
+---
+
+3. What is Activity?
+
+👉 Activity is a single screen in an app.
+
+Example:
+
+public class MainActivity extends AppCompatActivity {
+}
+
+
+---
+
+4. What is XML in Android?
+
+👉 XML is used to design UI (layout).
+
+Example:
+
+<Button
+    android:text="Click Me"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+---
+
+5. What is Intent?
+
+👉 Intent is used to move from one activity to another.
+
+Example:
+
+Intent i = new Intent(this, SecondActivity.class);
+startActivity(i);
+
+
+---
+
+🔹 EXPERIMENT 6 (Spinner, Toast, Alert, Popup)
+
+6. What is Spinner?
+
+👉 Spinner is a dropdown list to select one item. 
+
+
+---
+
+7. What is Toast?
+
+👉 Toast is a small message that shows for few seconds.
+
+Example:
+
+Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+
+
+---
+
+8. What is Alert Dialog?
+
+👉 It is a popup box asking user decision (Yes/No).
+
+Example:
+
+AlertDialog.Builder builder = new AlertDialog.Builder(this);
+builder.setMessage("Are you sure?");
+builder.setPositiveButton("Yes", null);
+builder.show();
+
+
+---
+
+9. Difference between Toast and Alert?
+
+👉 Toast → short message
+👉 Alert → needs user action
+
+
+---
+
+🔹 EXPERIMENT 7 (Menus & Touch Mode)
+
+10. What is Touch Mode?
+
+👉 It means user interacts by touching screen. 
+
+
+---
+
+11. Types of Menu?
+
+👉 3 types:
+
+Options Menu
+
+Context Menu
+
+Popup Menu
+
+
+
+---
+
+12. What is Options Menu?
+
+👉 Menu shown in 3 dots (top right).
+
+Example:
+
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu, menu);
+    return true;
+}
+
+
+---
+
+13. What is Context Menu?
+
+👉 Menu shown on long press.
+
+
+---
+
+14. What is Popup Menu?
+
+👉 Menu shown when clicking a button.
+
+Example:
+
+PopupMenu popup = new PopupMenu(this, button);
+popup.show();
+
+
+---
+
+🔹 EXPERIMENT 8 (Notifications)
+
+15. What is Notification?
+
+👉 Message shown in status bar. 
+
+
+---
+
+16. What is PendingIntent?
+
+👉 It is used to perform action later (like opening activity).
+
+
+---
+
+17. Code for Notification:
+
+NotificationCompat.Builder builder =
+ new NotificationCompat.Builder(this, "channel")
+ .setContentTitle("Hello")
+ .setContentText("Message")
+ .setSmallIcon(R.drawable.ic_launcher);
+
+NotificationManagerCompat manager = NotificationManagerCompat.from(this);
+manager.notify(1, builder.build());
+
+
+---
+
+18. What happens when user clicks notification?
+
+👉 It can open another activity.
+
+
+---
+
+🔹 EXPERIMENT 9 (SQLite Database)
+
+19. What is SQLite?
+
+👉 It is a lightweight database used in Android. 
+
+
+---
+
+20. How to create database?
+
+SQLiteDatabase db = openOrCreateDatabase("MyDB", MODE_PRIVATE, null);
+
+
+---
+
+21. How to create table?
+
+db.execSQL("CREATE TABLE Student(name VARCHAR, age INT)");
+
+
+---
+
+22. How to insert data?
+
+db.execSQL("INSERT INTO Student VALUES('Sakshi',20)");
+
+
+---
+
+23. How to fetch data?
+
+Cursor c = db.rawQuery("SELECT * FROM Student", null);
+
+
+---
+
+24. What is Cursor?
+
+👉 Cursor is used to read data from database.
+
+
+---
+
+25. How to delete data?
+
+db.delete("Student", "name=?", new String[]{"Sakshi"});
+
+
+---
+
+26. How to update data?
+
+ContentValues values = new ContentValues();
+values.put("name", "Riya");
+db.update("Student", values, "name=?", new String[]{"Sakshi"});
+
+
+---
+
+🔹 EXPERIMENT 10 (Xcode iOS – External Viva)
+
+27. What is Xcode?
+
+👉 Xcode is an IDE for iOS app development. 
+
+
+---
+
+28. What is iOS Simulator?
+
+👉 It is used to run iOS apps without real device.
+
+
+---
+
+29. What is Interface Builder?
+
+👉 Tool to design UI by drag & drop.
+
+
+---
+
+30. What is IBOutlet?
+
+👉 Used to connect UI to code.
+
+
+---
+
+31. What is IBAction?
+
+👉 Used to handle button click.
+
+Example:
+
+@IBAction func buttonTapped(_ sender: UIButton) {
+    label.text = "Hello"
+}
+
+
+---
+
+🔹 IMPORTANT EXAMINER QUESTIONS (VERY IMPORTANT ⭐)
+
+32. Difference between Activity and Fragment?
+
+👉 Activity → full screen
+👉 Fragment → part of screen
+
+
+---
+
+33. What is APK?
+
+👉 APK is the final app file installed on mobile.
+
+
+---
+
+34. What is Manifest file?
+
+👉 It contains app permissions and details.
+
+
+---
+
+35. What is Adapter?
+
+👉 Adapter connects data to UI (like Spinner/ListView).
+
+
+---
+
+36. What is Event Handling?
+
+👉 It means handling user actions (click, touch).
+
+
+
+🔹 Experiment 11 Viva (UI Elements, Outlets, Actions)
+
+✅ Basic Viva Questions
+
+1. What is UILabel?
+
+Answer:
+UILabel is used to display text on screen. It shows static information like titles or messages.
+
+
+---
+
+2. What is UIButton?
+
+Answer:
+UIButton is used for user interaction. When user taps it, some action is performed.
+
+
+---
+
+3. What is UIImageView?
+
+Answer:
+It is used to display images in the app.
+
+
+---
+
+4. What is UIView?
+
+Answer:
+UIView is a container that holds other UI elements and helps in design.
+
+
+---
+
+5. What is Interface Builder?
+
+Answer:
+It is a tool in Xcode used to design UI by drag and drop.
+
+
+---
+
+✅ Important Viva (Examiner Level)
+
+6. What is @IBOutlet?
+
+Answer:
+@IBOutlet is used to connect UI elements from storyboard to Swift code.
+
+👉 Example:
+
+@IBOutlet weak var myLabel: UILabel!
+
+
+---
+
+7. What is @IBAction?
+
+Answer:
+@IBAction is used to handle user actions like button click.
+
+👉 Example:
+
+@IBAction func buttonTapped(_ sender: UIButton) {
+    myLabel.text = "Button Tapped!"
+}
+
+
+---
+
+8. Difference between IBOutlet and IBAction?
+
+IBOutlet	IBAction
+
+Used to connect UI to code	Used to handle events
+For accessing UI elements	For user interaction
+
+
+
+---
+
+✅ Code Viva Questions
+
+9. What happens when button is clicked in your program?
+
+Answer:
+When button is clicked:
+
+Label text changes
+
+View color changes
+
+Image changes
+
+
+
+---
+
+10. How do you change image in UIImageView?
+
+Answer:
+
+myImageView.image = UIImage(named: "image2")
+
+
+---
+
+
+---
+
+🔹 Experiment 12 Viva (Intermediate UI, Constraints, Data)
+
+✅ Basic Questions
+
+1. What is Auto Layout?
+
+Answer:
+Auto Layout is used to make UI responsive for different screen sizes.
+
+
+---
+
+2. What is ViewController?
+
+Answer:
+It controls UI and handles app logic.
+
+
+---
+
+3. What is MVC?
+
+Answer:
+MVC = Model + View + Controller
+
+Model → Data
+
+View → UI
+
+Controller → Logic
+
+
+
+---
+
+✅ Important Viva
+
+4. What are Constraints?
+
+Answer:
+Constraints define position and size of UI elements.
+
+👉 Example:
+
+Top spacing
+
+Center alignment
+
+Width/height
+
+
+
+---
+
+5. What is viewDidLoad()?
+
+Answer:
+It is a method that runs when screen loads.
+
+👉 Example:
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+}
+
+
+---
+
+✅ Code Viva Questions
+
+6. What is structure used in your program?
+
+Answer:
+
+struct UserProfile {
+    let name: String
+    let age: Int
+    let imageName: String
+}
+
+
+---
+
+7. How data is displayed on UI?
+
+Answer:
+
+nameLabel.text = "Name: \(user.name)"
+ageLabel.text = "Age: \(user.age)"
+
+
+---
+
+8. How image is loaded?
+
+Answer:
+
+profileImageView.image = UIImage(named: user.imageName)
+
+
+---
+
+9. Why constraints are important?
+
+Answer:
+Without constraints, UI will break on different screen sizes.
+
+
+---
+
+
+---
+
+🔹 Experiment 13 Viva (DatePicker, PickerView, Slider)
+
+✅ Basic Questions
+
+1. What is UIDatePicker?
+
+Answer:
+It is used to select date and time.
+
+
+---
+
+2. What are modes of UIDatePicker?
+
+Answer:
+
+Date
+
+Time
+
+Date & Time
+
+Countdown Timer
+
+
+
+---
+
+3. What is UIPickerView?
+
+Answer:
+It is used to select item from list (scroll wheel).
+
+
+---
+
+4. What is UISlider?
+
+Answer:
+It is used to select value from range (0–100).
+
+
+---
+
+✅ Important Viva
+
+5. What are delegates in UIPickerView?
+
+Answer:
+
+DataSource → number of rows
+
+Delegate → display data
+
+
+
+---
+
+6. What is DateFormatter?
+
+Answer:
+Used to convert date into readable format.
+
+
+---
+
+✅ Code Viva Questions
+
+7. Example of Picker Data?
+
+Answer:
+
+let items = ["Red", "Green", "Blue", "Yellow"]
+
+
+---
+
+8. How slider value is shown?
+
+Answer:
+
+sliderValueLabel.text = "\(slider.value)"
+
+
+---
+
+9. What happens when user changes slider?
+
+Answer:
+Label updates with new value in real-time.
+
+
+---
+
+10. How date is displayed?
+
+Answer:
+
+let formatter = DateFormatter()
+formatter.dateStyle = .medium
+dateLabel.text = formatter.string(from: datePicker.date)
+
+
+---
+
+✅ Advanced Viva (External Examiner)
+
+11. Difference between PickerView and DatePicker?
+
+PickerView	DatePicker
+
+Custom data	Date & time
+Uses array	Uses system date
+
+
+
+---
+
+12. Real-life use of Slider?
+
+Answer:
+
+Volume control
+
+Brightness control
+
+
+
+---
+
+13. Real-life use of PickerView?
+
+Answer:
+
+Select country
+
+Select color
+
+
+
+
+
+
+
